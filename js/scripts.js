@@ -15,16 +15,16 @@ function getAndSetMadLibValues() {
     document.querySelector("span#verb").innerText = verbInput;
     document.querySelector("span#noun").innerText = nounInput;
     document.querySelector("span#exclamation").innerText = exclamationInput;
-};
+}
 
 function setFormSubmissionEventHandler() {
     let form = document.querySelector("form");
-    form.onsubmit = function (e) {
-        e.preventDefault();
+    form.onsubmit = function (event) {
+        event.preventDefault();
         getAndSetMadLibValues();
         document.querySelector("div#story").removeAttribute("class");
-    };
-};
+    }
+}
 
 window.onload = function () {
     setFormSubmissionEventHandler();
